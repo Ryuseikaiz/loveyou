@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You, Babe</title>
+    <style>
+        body {
+            background-color: #f0e68c;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff6347;
+            font-size: 48px;
+        }
+        p {
+            font-size: 24px;
+            color: #555;
+        }
+        .heart {
+        font-size: 50px;
+        color: red;
+        animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+    }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e55347;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="loveMessage">I Love You, Babe!</h1>
+    <p>Click the button to change the message!</p>
+    <p class="heart">❤️</p>
+    <button onclick="changeMessage()">Change Message</button>
+
+    <script>
+        const messages = [
+            "dm genconcak",
+            "genngu hôi cúp",
+            "hốc trưởng peyz",
+            "vinh dọn lúa",
+            "cà nhông rừng câm",
+            "kinsante hôi cúp",
+            "lehends always die"
+        ];
+
+        function changeMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("loveMessage").innerText = messages[randomIndex];
+        }
+    </script>
+</body>
+</html>
